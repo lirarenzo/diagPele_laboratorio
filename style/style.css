@@ -1,0 +1,446 @@
+@charset "UTF-8";
+/*Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --cor0:#E82048;
+    --cor1:#A81835;
+    --corPadrao:#5D0C1C;
+    --cor3:#690E20;
+    --cor4:#420914;
+    --corDestaque:#ccb38d;
+    --corFundo:#ccb38d2c;
+
+}
+body{
+    background-color: var(--corFundo);
+}
+
+
+/*Section Menu inicial*/
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: #fff;
+    position: sticky;
+    top: -1px;
+    border-bottom: 0.5px solid var(--corDestaque);
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 10vh;
+    grid-template-areas: "void pcp sociais";
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 4;
+}
+.ulHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.liHeader{
+    margin: 3vw;
+}
+.liIcon{
+    margin: 6px;
+}
+.liIcon:hover{
+    transform: scale(1.4);
+    transition: all 0.5s;
+}
+#void{
+    grid-area: void;
+}
+#navpcp{
+    grid-area: pcp;
+}
+#mediasSciais{
+    grid-area: sociais;
+}
+nav a{
+    text-decoration: none;
+    color: var(--corPadrao);
+}
+nav a:hover{
+    color: var(--cor0);
+    transition: all 0.5s;
+}
+
+/*Section Capa*/
+header{
+    background-color: var(--corPadrao);
+    width: 80vw;
+    height: 90vh;
+    min-width: 800px;
+    /*NAS TELAS ABAIXO DE 800px NÃO FICA BOM*/
+    /*PRECISA AJUSTAR AS REGRAS P CELULAR*/
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90vh;
+    grid-template-areas: "logo foto";
+    z-index: 1;
+}
+#logoCapa{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imgLogo{
+    opacity: 1;
+}
+#fotoCapa{
+    grid-area: foto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccb38d;
+    background-image: url('../images/capa_433x385.jpeg');
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    background-size: cover;
+}
+main{
+    background-color: #fff;
+    width: 80vw;
+    height: auto;
+    margin: auto;
+}
+main > section{
+    padding: 4vh;
+}
+main > section > h1{
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    color: var(--cor3);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+main > section h2{
+    padding-bottom: 3vh;
+    color: var(--cor4);
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: center;
+}
+main > section > p{
+    padding-bottom: 6vh;
+    color: var(--cor4);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center; 
+}
+
+/*Section Como Funciona*/
+#comoFunciona{
+    width:inherit;
+    height: auto;
+    border-bottom: 0.5px solid var(--corDestaque);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container__Func{
+    width: 75vw;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3vh;
+    color: var(--cor4);
+    font-weight: 3200;
+    font-size: 0.8rem;
+    text-align: center; 
+    position: relative;
+
+}
+.container__Func--element{
+    margin: 0 2vw;
+    width: 15vw;
+    max-width: 120px;
+    text-align: center;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    z-index: 1;
+}
+.container__Func--element h2{
+    margin-top: 1vh;
+}
+.line{
+    padding: 25px;
+    border: 2px solid var(--cor3);
+    border-width: 3px 0 0 0;
+    z-index: 3;
+}
+#line1{
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 21%;
+}
+#line2{
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 47%;
+}
+#line3{
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 71%;
+}
+
+/*Section Outros Serviços*/
+#outrosServicos{
+    width:inherit;
+    height: auto;
+    border-bottom: 0.5px solid var(--corDestaque);
+}
+.container__outrosSv{
+    width: 60vw;
+    max-width: 700px;
+    margin: 6vh auto 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.container__outrosSv--element{
+    max-width: 15vw;
+    color: var(--cor4);
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.container__outrosSv--element h2{
+    margin-top: 2vh;
+}
+
+/*Section Preparatório TED*/
+#prepTED{
+    width:inherit;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container__TED{
+    width:80vw;
+    max-width: 800px;
+    height: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-weight: 400;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+}
+.container__TED--element{
+    list-style-image: url(../images/icon_list.svg);
+    list-style-position: inside;
+    color: var(--cor4);
+}
+.ElementList_TED{
+    margin: 1rem 0;
+    line-height: 1.75rem;
+}
+
+/*Section Nossos Números*/
+#nossosNum{
+    background-color: var(--corPadrao);
+    width:inherit;
+    height: auto;
+    color: #fff;
+}
+#nossosNum > h1{
+    color: #fff;
+    margin-bottom: 6vh;
+}
+.container__nossosNum{
+    width: 60vw;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 6vh;
+}
+.container__nossosNum--element{
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.container__nossosNum--element > h1{
+    font-size: 1.4rem;
+}
+.container__nossosNum--element > p{
+    width: 85px;
+}
+
+/*Section Quem é a Dra M.LAL*/
+#MLAL{
+    width:inherit;
+    height: auto;
+    border-bottom: 0.5px solid var(--corDestaque);
+    padding: 0;
+    margin: 0;
+}
+#MLAL a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--cor3);
+}
+#MLAL a:hover{
+    font-weight: 700;
+    color: var(--cor0);
+    transition: 0.3s;
+}
+#MLAL h1{
+    margin: 3vh auto;
+}
+.container__MLAL{
+    width:inherit;
+    height: auto;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container__MLAL--list{
+    width:inherit;
+    height: inherit;
+    margin: 0 1vw;
+    padding: 15px;
+    background-color: var(--corDestaque);
+    border: 5px solid var(--cor3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.container__MLAL--list li{
+    width:36vw;
+    height: inherit;
+    margin-right: 20px;
+    color: var(--cor3);
+    font-weight: 400;
+    font-size: 1.05rem;
+    text-align: justify;
+    line-height: 1.75rem;
+    font-family: 'Poiret One', cursive;
+    list-style-image: url(../images/icon_list_checked.svg);
+    list-style-position: inside;
+}
+.container__MLAL--figure{
+    width:36vw;
+    height: inherit;
+    background-image: url('../images/draMrc_560x435.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    border-radius: 10px;
+}
+
+/*Section Próximas Turmas*/
+#proxTurmas{
+    background-color: var(--corPadrao);
+    width: inherit;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#proxTurmas h1{
+    color: #fff;
+    margin-bottom: 2vh;
+}
+#proxTurmas p{
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+#txtDestaque p{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*Section Rodapé*/
+footer{
+    background-color: #fff;
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: 10vh;
+    grid-template-areas: "sociais void marca";
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+#footerMediasSciais{
+    grid-area: sociais;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footerVoid{
+    grid-area: void;
+}
+footer > p{
+    grid-area: marca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--cor3);
+}
+
+/*Responsividade*/
+@media screen and (max-width: 1000px){
+    .container__MLAL--list li{
+        width: inherit;
+    }
+    .container__MLAL--figure{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px){
+    header{
+        width: 100vw;
+        min-width: 0;
+        margin: auto;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 90vh;
+        grid-template-areas: "foto";
+        z-index: 1;
+    }
+    #logoCapa{
+        display: none;
+    }
+    #fotoCapa{
+        background-attachment: fixed;
+    }
+
+}
+@media screen and (max-width: 400px){
+}
+
