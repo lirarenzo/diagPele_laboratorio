@@ -165,7 +165,6 @@ main > section > p{
     font-size: 0.8rem;
     text-align: center; 
     position: relative;
-
 }
 .container__Func--element{
     margin: 0 2vw;
@@ -441,6 +440,44 @@ footer > p{
     }
 
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 550px){
+    main{
+        width: 100vw;
+    }
+    
+    .container__Func{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas: "01 02" "03 04";
+        background-color: #A81835;
+        gap: 5px;
+    }
+    .container__Func--element{
+        margin: auto;
+        width: auto;    
+    }
+    #container__Func--element_01{
+        grid-area: 01;
+        background-color: aqua;
+    }
+    #container__Func--element_02{
+        grid-area: 02;
+        background-color: rgb(255, 0, 217);
+    }
+    #container__Func--element_03{
+        grid-area: 03;
+        background-color: rgb(255, 68, 0);
+    }
+    #container__Func--element_04{
+        grid-area: 04;
+        background-color: rgb(46, 110, 110);
+    }
+    #line1, #line2, #line3{
+        display: none;
+    }
+    
+    
+
 }
 
