@@ -7,15 +7,18 @@
     <title>DiagPele - Consultoria em Dermatopatologia</title>
     <link rel="shortcut icon" href="./icons/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <div id="void"></div>
+        <div id="void">
+            <span class="material-icons" onclick="clickMenu()">menu</span>
+        </div>
         <ul class="ulHeader" id="navPcp">
-            <li class="liHeader"><a href="./index.html">Home</a></li>
-            <li class="liHeader"><a href="#comoFunciona">Laboratório Virtual</a></li>
-            <li class="liHeader"><a href="#prepTED">TED</a></li>
-            <li class="liHeader"><a href="#MLAL">FAQ</a></li>
+            <li class="liHeader"  id="li_01"><a href="./index.html">Home</a></li>
+            <li class="liHeader" id="li_02"><a href="#comoFunciona">Laboratório Virtual</a></li>
+            <li class="liHeader" id="li_03"><a href="#prepTED">TED</a></li>
+            <li class="liHeader" id="li_04"><a href="#MLAL">FAQ</a></li>
         </ul>
         <ul class="ulHeader" id="mediasSocias">
             <li class="liIcon"><a href="#"><img class="socIcon" src="./images/logo_whats_20x20.svg" alt="WhatsApp"></a></li>
@@ -189,5 +192,18 @@
 
 
     </footer>
+    <script>
+        function clickMenu(){
+            if (li_01.style.display == 'flex' & li_02.style.display == 'flex' & li_03.style.display == 'flex' & li_04.style.display == 'flex'){
+                li_01.style.display = 'none'; li_02.style.display = 'none';
+                li_03.style.display = 'none'; li_04.style.display = 'none'
+            } else {
+                li_01.style.display = 'flex';
+                li_02.style.display = 'flex';
+                li_03.style.display = 'flex';
+                li_04.style.display = 'flex'
+            }
+        }
+    </script>
 </body>
 </html>

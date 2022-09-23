@@ -57,6 +57,12 @@ nav{
 }
 #void{
     grid-area: void;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#void .material-icons-outlined{
+    display: none;
 }
 #navpcp{
     grid-area: pcp;
@@ -77,14 +83,12 @@ nav a:hover{
 header{
     background-color: var(--corPadrao);
     width: 80vw;
-    height: 90vh;
+    height: auto;
     min-width: 800px;
-    /*NAS TELAS ABAIXO DE 800px NÃO FICA BOM*/
-    /*PRECISA AJUSTAR AS REGRAS P CELULAR*/
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90vh;
+    grid-template-rows: 95vh;
     grid-template-areas: "logo foto";
     z-index: 1;
 }
@@ -240,15 +244,14 @@ main > section > p{
     align-items: center;
 }
 .container__TED{
-    width:80vw;
+    width:100%;
     max-width: 800px;
     height: auto;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin: 3vh auto;
     font-weight: 400;
     font-size: 0.8rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .container__TED--element{
     list-style-image: url(../images/icon_list.svg);
@@ -258,6 +261,11 @@ main > section > p{
 .ElementList_TED{
     margin: 1rem 0;
     line-height: 1.75rem;
+}
+#container__TED--element-01, #container__TED--element-02{
+    width: inherit;
+    max-width: 300px;
+    line-height: 1.25%rem;
 }
 
 /*Section Nossos Números*/
@@ -434,42 +442,111 @@ footer > p{
 
 /*RESPONSIVIDADE*/
 @media screen and (max-width: 1000px){
-    .container__MLAL--list li{
-        width: inherit;
-    }
-    .container__MLAL--figure{
-        display: none;
-    }
+.container__MLAL--list li{
+    width: inherit;
 }
-@media screen and (max-width: 800px){
-header{
-    width: 100vw;
-    min-width: 0;
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: 90vh;
-    grid-template-areas: "foto";
-}
-#logoCapa{
+.container__MLAL--figure{
     display: none;
 }
-#fotoCapa{
-    background-attachment: fixed;
 }
 
+@media screen and (max-width: 800px){
+/*Section Capa*/
+header{
+    background-image: url('../images/capa_433x385.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    min-width: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95vh;
+    grid-template-areas: "logo";
+    z-index: 1;
 }
+#logoCapa{
+    grid-area: logo;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#imgLogo{
+    opacity: 1;
+}
+#fotoCapa{
+    display: none;
+}
+.line, #line1, #line2, #line3, #line4{
+    display: none;
+}
+}
+
 @media screen and (max-width: 550px){
 main{
     width: 100vw;
 }
 
-/*Section Capa*/
 
+/***********/
 
-#fotoCapa{
-    background-position-x: 15%;
+/*Section Menu inicial*/
+nav{
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "void pcp sociais";
+    height: auto ;
+}
+#void{
+    grid-area: void;
+    display: flex;
+    align-items: flex-start;
+    margin-top:15%;
+}
+.ulHeader{
+    display: flex;
+    align-items: flex-start;
+    margin-top:15%;
 }
 
+#mediasSociais{
+    grid-area: sociais;
+}
+#void .material-icons{
+    display: flex;
+    color: var(--cor1); 
+}
+#void .material-icons:hover{
+    color: var(--cor0); 
+    transition: all 0.5s;
+    transform: scale(1.4);
+}
+#navPcp{
+    grid-area: pcp;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 6vh;
+}
+.ulHeader .liHeader{
+   Display: none; /*ESSE Q TEM Q SUMIR E APARECER*/
+    margin: 4% auto;
+    background-color: #fff;
+    text-transform: uppercase;
+
+}
+
+
+
+/***********/
+
+
+/*Section Capa*/
 /*Section Como Funciona*/
 #comoFunciona{
 }
@@ -514,8 +591,6 @@ main{
 .line, #line1, #line2, #line3, #line4{
     display: none;
 }
-
-
 /*Section Outros Serviços*/
 .container__outrosSv{
     width: 90%;
@@ -531,18 +606,17 @@ main{
     margin-top: 5%;
     padding-bottom: 2%;
 }
-
 /*Section Preparatório TED*/
 .container__TED{
     width:95%;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    padding-left: 10%;
 }
 .ElementList_TED{
     margin: 2% 0;
 }
-
 /*Section Nossos Números*/
 #nossosNum > h1{
     margin-bottom: 10%;
@@ -556,7 +630,6 @@ main{
     grid-template-areas: "num_01 num_02" "num_03 num_04";
     margin-bottom: 0;
 }
-
 /*Section Quem é a Dra M.LAL*/
 #MLAL > p{
     margin: 0 5% 0;
@@ -564,7 +637,6 @@ main{
 .container__MLAL--list li{
     width:100%;
 }
-
 /*Section Próximas Turmas*/
 #proxTurmas{
     margin:  0;
@@ -575,11 +647,13 @@ main{
     margin-bottom: 2.5%;
 }
 #proxTurmas > p{
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 300;
-    padding: 0 0 2.5%;
+    padding: 0 0 2%;
 }
-
+#txtDestaque p{
+    font-size: 1.8rem;
+}
 /*Section Rodapé*/
 footer{
     height: 6vh;
@@ -594,12 +668,12 @@ footer{
 #footerVoid{
     display: none;
 }
-.liIcon{
+footer .liIcon{
     display: none;
 }
 footer > p{
     font-weight: 500;
+    
 }
-
 }
 
