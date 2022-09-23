@@ -47,6 +47,7 @@ nav{
 }
 .liHeader{
     margin: 3vw;
+    display: flex;
 }
 .liIcon{
     margin: 6px;
@@ -61,7 +62,7 @@ nav{
     align-items: center;
     justify-content: center;
 }
-#void .material-icons-outlined{
+#void .material-icons{
     display: none;
 }
 #navpcp{
@@ -491,10 +492,6 @@ header{
 main{
     width: 100vw;
 }
-
-
-/***********/
-
 /*Section Menu inicial*/
 nav{
     grid-template-columns: 2fr 6fr 2fr;
@@ -513,7 +510,6 @@ nav{
     align-items: flex-start;
     margin-top:15%;
 }
-
 #mediasSociais{
     grid-area: sociais;
 }
@@ -534,18 +530,11 @@ nav{
     margin-top: 6vh;
 }
 .ulHeader .liHeader{
-   Display: none; /*ESSE Q TEM Q SUMIR E APARECER*/
+    Display: none; 
     margin: 4% auto;
     background-color: #fff;
     text-transform: uppercase;
-
 }
-
-
-
-/***********/
-
-
 /*Section Capa*/
 /*Section Como Funciona*/
 #comoFunciona{
