@@ -274,23 +274,42 @@ main > section > p{
     width: 60vw;
     max-width: 700px;
     margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "num_01 num_02 num_03 num_04";
     margin-bottom: 6vh;
+    text-align: center;
+
+}
+#num01{
+    grid-area: num_01;
+}
+#num02{
+    grid-area: num_02;
+}
+#num03{
+    grid-area: num_03;
+}
+#num04{
+    grid-area: num_04;
 }
 .container__nossosNum--element{
-    text-align: center;
     font-size: 0.7rem;
     font-weight: bolder;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .container__nossosNum--element > h1{
     font-size: 1.4rem;
 }
 .container__nossosNum--element > p{
-    width: 85px;
+    width: 60%;
 }
+
 
 /*Section Quem é a Dra M.LAL*/
 #MLAL{
@@ -336,6 +355,7 @@ main > section > p{
     width:36vw;
     height: inherit;
     margin-right: 20px;
+    padding-bottom: 20px;
     color: var(--cor3);
     font-weight: 400;
     font-size: 1.05rem;
@@ -477,7 +497,92 @@ footer > p{
         display: none;
     }
     
-    
+/**/
+
+/*Section Outros Serviços*/
+.container__outrosSv{
+    width: 90%;
+    margin-bottom: 0;
+    justify-content: center;
+    flex-direction: column;
+}
+.container__outrosSv--element{
+    max-width: 75%;
+    margin-bottom: 15%;
+}
+.container__outrosSv--element h2{
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+
+/*Section Preparatório TED*/
+.container__TED{
+    width:95%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ElementList_TED{
+    margin: 2% 0;
+}
+
+/*Section Nossos Números*/
+#nossosNum > h1{
+    margin-bottom: 10%;
+}
+.container__nossosNum{
+    width: 90%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "num_01 num_02" "num_03 num_04";
+    margin-bottom: 0;
+}
+
+/*Section Quem é a Dra M.LAL*/
+#MLAL > p{
+    margin: 0 5% 0;
+}
+.container__MLAL--list li{
+    width:100%;
+}
+
+/*Section Próximas Turmas*/
+#proxTurmas{
+    margin:  0;
+    padding: 10% 2.5%;
+    height: auto;
+}
+#proxTurmas h1{
+    margin-bottom: 2.5%;
+}
+#proxTurmas > p{
+    font-size: 0.7rem;
+    font-weight: 300;
+    padding: 0 0 2.5%;
+}
+
+/*Section Rodapé*/
+footer{
+    height: 6vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6vh;
+    grid-template-areas: "marca";
+}
+#footerMediasSciais{
+    display: none;
+    background-color: gray;
+}
+#footerVoid{
+    display: none;
+}
+.liIcon{
+    display: none;
+}
+footer > p{
+    font-weight: 500;
+}
 
 }
 
