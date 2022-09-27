@@ -455,7 +455,7 @@ footer > p{
 /*Section Capa*/
 header{
     background-image: url('../images/capa_433x385.jpeg');
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position-x: 30%;
     background-size: cover;
@@ -664,8 +664,9 @@ footer > p{
     font-weight: 500;
 }
 }
+
 /*Reolve problema de compatibilidade da foto de capa nos iPhones*/
-@media (max-width: @iphone-screen) {
+@media (max-width: 380px {
 #fotoCapa{
     background-attachment: scroll;
 }
