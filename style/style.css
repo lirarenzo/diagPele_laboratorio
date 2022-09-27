@@ -662,7 +662,11 @@ footer .liIcon{
 }
 footer > p{
     font-weight: 500;
-    
 }
 }
-
+/*Reolve problema de compatibilidade da foto de capa nos iPhones*/
+@media (max-width: @iphone-screen) {
+#fotoCapa{
+    background-attachment: scroll;
+}
+}
