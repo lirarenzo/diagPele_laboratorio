@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="onResize()">
     <nav>
         <div id="void">
             <span class="material-icons" onclick="clickMenu()">menu</span>
@@ -202,6 +202,22 @@
         <p>2022 - DiagPele</p>
     </footer>
     <script>
+        /*Para evitar o sumiço do MENU qdo a tela eh aumentada*/
+        function onResize(){
+                    if (window.innerWidth >= 550){
+                        li_01.style.display = 'flex';
+                        li_02.style.display = 'flex';
+                        li_03.style.display = 'flex';
+                        li_04.style.display = 'flex'
+                    }else{
+                        li_01.style.display = 'none'; 
+                        li_02.style.display = 'none';
+                        li_03.style.display = 'none'; 
+                        li_04.style.display = 'none'
+                    }
+                }
+
+
         function clickMenu(){
             if (li_01.style.display == 'flex' & 
                 li_02.style.display == 'flex' & 
